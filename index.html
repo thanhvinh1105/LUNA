@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You are invited to Luna's Birthday ❤️</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFB6C1; /* Pink background */
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      position: relative; /* Needed for the sticker positioning */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative; /* Needed for the sticker positioning */
+      z-index: 1; /* Bring the container on top of the stickers */
+    }
+
+    .header {
+      text-align: center;
+      padding: 40px 0;
+      color: #F5F5DC; /* Beige title color */
+    }
+
+    .hero-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .hero, .about {
+      width: 40%;
+      margin: 0 20px;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero img, .about img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 10px;
+    }
+
+    /* Confetti effect */
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: #f44336;
+      border-radius: 50%;
+      animation: confetti 5s ease-in-out infinite;
+    }
+
+    @keyframes confetti {
+      0% {
+        transform: translateY(-100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+      }
+    }
+
+    /* Moving stickers */
+    .sticker {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    .birthday-cake {
+      left: 2%;
+      top: 2%;
+      animation-name: cakeMove;
+    }
+
+    .balloon {
+      right: 2%;
+      bottom: 1%;
+      animation-name: balloonMove;
+    }
+
+    .birthday-cake img,
+    .balloon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    
+   
+  </style>
+</head>
+<body>
+  <!-- Confetti effect -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  </script>
+
+  <div class="container">
+    <div class="header">
+      <h1>You are invited to Luna's Birthday ❤️</h1>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero">
+        <img src="/Users/tranthanhvinh/Downloads/IMG_2290.jpeg" alt="Luna">
+      </div>
+      <div class="about">
+        <img src="/Users/tranthanhvinh/Downloads/IMG_1901.jpeg" alt="Luna playing">
+      </div>
+    </div>
+  </div>
+
+  <!-- Moving stickers -->
+  <div class="sticker birthday-cake">
+    <img src="/Users/tranthanhvinh/Desktop/HTML/luna birthday/happy-birthday-bon-anniversaire.gif" alt="Birthday Cake">
+  </div>
+  <div class="sticker balloon">
+    <img src="/Users/tranthanhvinh/Desktop/HTML/luna birthday/cake-birthday.gif" alt="Balloon">
+  </div>
+</body>
+</html>
