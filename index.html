@@ -59,7 +59,7 @@
       width: 10px;
       height: 10px;
       background-color: #f44336;
-      border-radius: 70%;
+      border-radius: 50%;
       animation: confetti 8s ease-in-out infinite;
     }
 
@@ -101,8 +101,52 @@
       object-fit: contain;
     }
 
-    
-   
+    @media (max-width: 768px) {
+      .sticker {
+        width: 150px;
+        height: 150px;
+      }
+
+      .hero, .about {
+        width: 100%;
+        height: auto;
+      }
+
+      .hero img, .about img {
+        max-width: 100%;
+        max-height: 300px;
+      }
+
+      .container {
+        padding: 10px;
+      }
+
+      .header {
+        padding: 20px 0;
+      }
+
+      .hero-container {
+        margin-bottom: 20px;
+      }
+    }
+
+    @keyframes cakeMove {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    @keyframes balloonMove {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
   </style>
 </head>
 <body>
